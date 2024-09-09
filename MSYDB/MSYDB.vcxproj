@@ -127,7 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="date_and_time.cpp" />
+    <ClCompile Include="dokument.cpp" />
     <ClCompile Include="MSYDB.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="date_and_time.h" />
+    <ClInclude Include="dokument.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
