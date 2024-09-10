@@ -5,11 +5,15 @@
 int main()
 
 {
-    date_and_time a;
+   
+	date_m a;
 
+	std::cout << a.date_to_string()<<std::endl;
 
-    std::cout << a.get_hours() << ":" << a.get_minutes() << ":" << a.get_seconds()<<std::endl;
-    std::cout << a.get_day() << ":" << a.get_month() << ":" << a.get_year();
+	time_m c;
+
+	std::cout << c.time_to_string();
+
 
    
    
