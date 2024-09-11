@@ -5,8 +5,6 @@
 #include<chrono>
 #include <string>
 
-
-
 class date_m
 {
     int day;
@@ -38,7 +36,7 @@ public:
 	}
 
 	std::string date_to_string() const {
-		return std::to_string(day) + '-' + std::to_string(month) + '-' + std::to_string(year);
+		return "Date : " + std::to_string(day) + '-' + std::to_string(month) + '-' + std::to_string(year);
 	}
 
 	void restart() {
@@ -92,7 +90,7 @@ public:
 		return seconds;
 	}
 	std::string time_to_string() const {
-		return std::to_string(hours) + ':' + std::to_string(minutes) + ':' + std::to_string(seconds);
+		return "Time : " + std::to_string(hours) + ':' + std::to_string(minutes) + ':' + std::to_string(seconds);
 	}
 	void restart() {
 		auto now = std::chrono::system_clock::now();
