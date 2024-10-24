@@ -16,25 +16,20 @@ public:
         set_to_current_date();
     }
 
-    
     date_m(int d, int m, int y) : day{ d }, month{ m }, year{ y } {}
 
-    
     int get_year() const { return year; }
     int get_month() const { return month; }
     int get_day() const { return day; }
-
     
     std::string date_to_string() const {
         return "Date: " + std::to_string(day) + '-' + std::to_string(month) + '-' + std::to_string(year);
     }
 
-    
     void restart() {
         set_to_current_date();
     }
 
-    
     void set_day(int d) {
         if (d >= 1 && d <= 31)  
             day = d;

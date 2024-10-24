@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <vector>
 #include <string>
@@ -28,7 +29,7 @@ public:
     }
 };
 
-// Класс Раствор
+
 class Solution : public Medication {
 public:
     Solution(const std::string& name, const std::string& dosage, double price)
@@ -43,7 +44,7 @@ public:
     }
 };
 
-// Класс Таблетка
+
 class Tablet : public Medication {
 public:
     Tablet(const std::string& name, const std::string& dosage, double price)
@@ -91,9 +92,9 @@ public:
 
 class Pharmacy {
 private:
-    std::vector<std::shared_ptr<Medication>> medications;  
+    std::vector<std::shared_ptr<Medication>> medications;
+
 public:
-    
     void add_medication(const std::shared_ptr<Medication>& medication) {
         medications.push_back(medication);
     }
@@ -103,9 +104,17 @@ public:
         double total_price = 0;
         for (const auto& med : medications) {
             std::cout << med->get_info() << std::endl;
-            total_price += med->get_price();  
+            total_price += med->get_price();
         }
         std::cout << "Total Price of Medications: RUB" << total_price << std::endl;
+    }
+
+    std::string get_medications_info() const {  
+        std::string info;
+        for (const auto& med : medications) {
+            info += med->get_info() + "\n";
+        }
+        return info.empty() ? "Нет медикаментов\n" : info;
     }
 
     const std::vector<std::shared_ptr<Medication>>& get_medications() const {

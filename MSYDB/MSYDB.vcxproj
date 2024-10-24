@@ -132,7 +132,10 @@
     <ClCompile Include="doctor.cpp" />
     <ClCompile Include="dokument.cpp" />
     <ClCompile Include="humen.cpp" />
+    <ClCompile Include="Lab.cpp" />
     <ClCompile Include="MedicalRecord.cpp" />
+    <ClCompile Include="MedicalRecordManager.cpp" />
+    <ClCompile Include="Men.cpp" />
     <ClCompile Include="MSYDB.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -141,7 +144,10 @@
     <ClInclude Include="doctor.h" />
     <ClInclude Include="dokument.h" />
     <ClInclude Include="humen.h" />
+    <ClInclude Include="Lab.h" />
     <ClInclude Include="MedicalRecord.h" />
+    <ClInclude Include="MedicalRecordManager.h" />
+    <ClInclude Include="Men.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
